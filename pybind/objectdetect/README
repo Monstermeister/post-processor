@@ -1,0 +1,24 @@
+To inference the object detection models in TFLite format, run the following:
+
+  $ python test_tflitecustom.py
+
+For the script, TFLite models must be ready in "data/" subdirectory. You may
+copy the TFLite models from the path shown below.
+
+  (1) EfficientDet-Lite0
+    NETWORK/efficientdet/work-lite0/output_coco/efficientdet_lite0_coco.tflite
+    NETWORK/efficientdet/work-lite0/output_keti/efficientdet_lite0_keti.tflite
+
+  (2) SSD MobileNetV2
+    NETWORK/ssd_mobilenetv2/work-v2/output_coco/ssd_mobilenetv2_coco.tflite
+    NETWORK/ssd_mobilenetv2/work-v2/output_keti/ssd_mobilenetv2_keti.tflite
+
+Here, "NETWORK/" is the top directory where the release network generation tools
+are installed.
+
+For further customization, you may modify the script "test_tflitecustom.py".
+By default, the output annotated images are stored in "scratch/" subdirectory.
+
+To clean up all outputs in "scratch/", you may run:
+
+  $ make clean
